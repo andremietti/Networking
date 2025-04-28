@@ -15,7 +15,9 @@ public protocol NetworkManagerProtocol {
 }
 
 
-public final class Service: NetworkManagerProtocol {
+public final class NetworkService: NetworkManagerProtocol {
+    
+    public init() {}
     
     public func request<T>(endPoint: any EndPoint) async throws -> T where T : Decodable {
         guard let urlRequest = buildRequest(endPoint: endPoint) else {
