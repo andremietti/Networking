@@ -14,7 +14,7 @@ public protocol EndPoint {
     var method: HTTPMethod { get }
     var header: [String: String]? { get }
     var body: [String: String]? { get }
-    var parameters: [String: String]? { get }
+    var parameters: [String: String]? { get set }
 }
 
 extension EndPoint {
