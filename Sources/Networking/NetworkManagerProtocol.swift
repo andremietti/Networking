@@ -116,6 +116,10 @@ extension NetworkManagerProtocol {
         urlComponents.host = endPoint.host
         urlComponents.path = endPoint.path
         
+        urlComponents.setQueryItems(with: endPoint.parameters,
+                                    encodeValues: true,
+                                    skipEmptyValues: true)
+        
         guard let url = urlComponents.url else { return nil }
         
         let encoder = JSONEncoder()
