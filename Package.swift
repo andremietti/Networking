@@ -7,7 +7,7 @@ let package = Package(
     name: "Networking",
     
     platforms: [
-        .iOS(.v15)
+        .iOS(.v13)
     ],
 
     products: [
